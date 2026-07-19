@@ -123,6 +123,29 @@ Si la réponse est non, alors le document manque probablement d'informations imp
 
 ---
 
+# Les fondations du projet
+
+Les documents de fondation définissent la vision, les principes et la manière de développer Project Dust.
+
+Ils constituent le cadre de référence du projet et doivent rester stables dans le temps.
+
+Une fois le Sprint 00 terminé, ces documents sont considérés comme établis.
+
+Ils ne doivent être modifiés que dans les situations suivantes :
+
+- une erreur est découverte ;
+- une ambiguïté importante est identifiée ;
+- l'expérience du projet démontre qu'un principe nuit au développement ;
+- une nouvelle règle fondamentale émerge naturellement de l'évolution du projet.
+
+Les documents de fondation ne sont pas réécrits pour améliorer leur formulation ou suivre les tendances du moment.
+
+Ils évoluent uniquement lorsque l'expérience apporte un enseignement suffisamment important pour remettre en question un principe existant.
+
+La stabilité des fondations permet au projet d'évoluer sans avoir à rediscuter continuellement les mêmes décisions.
+
+---
+
 # Notre promesse
 
 Chaque sprint doit améliorer deux choses.
@@ -165,15 +188,15 @@ Un projet réussi est un projet que l'on peut reprendre des années plus tard sa
 
 # Notre engagement
 
-Cette charte n'est pas figée.
+Cette charte constitue le socle du projet.
 
-Elle évoluera avec notre expérience.
+À partir de la fin du Sprint 00, elle est considérée comme stable.
 
-Toute modification devra répondre à une seule question :
+Elle ne sera modifiée que si l'expérience démontre qu'un principe fondamental doit évoluer.
 
-> **Cette nouvelle règle rend-elle réellement Project Dust meilleur ?**
+Nous acceptons que notre implémentation évolue.
 
-Si la réponse est oui, elle mérite probablement d'intégrer cette charte.
+Nous protégeons les principes qui guident cette évolution.
 
 ---
 
