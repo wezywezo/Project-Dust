@@ -43,6 +43,23 @@ Les noms techniques (classes, méthodes, variables, concepts de programmation) p
 
 ---
 
+## Source de vérité
+
+Chaque information importante du projet doit posséder une **source de vérité unique**.
+
+Les autres documents doivent faire référence à cette source plutôt que de dupliquer son contenu.
+
+Exemples :
+
+- Le `README.md` présente le projet et renvoie vers la documentation.
+- `docs/README.md` présente la documentation et renvoie vers les documents spécialisés.
+- La Roadmap décrit l'avancement global du projet.
+- Les Sprints décrivent le travail en cours.
+
+Cette approche limite les incohérences, simplifie la maintenance et garantit que chaque information n'est mise à jour qu'à un seul endroit.
+
+---
+
 ## Évolution
 
 Ce document est évolutif.
