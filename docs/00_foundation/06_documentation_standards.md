@@ -60,8 +60,21 @@ Cette approche limite les incohérences, simplifie la maintenance et garantit qu
 
 ---
 
+## Niveau de détail
+
+La documentation doit être suffisamment détaillée pour expliquer le raisonnement, sans devenir verbeuse.
+
+Privilégier des explications courtes et précises.
+
+Si un sujet nécessite plusieurs paragraphes pour être expliqué, il mérite probablement son propre document ou une section dédiée.
+
+Chaque document doit rester facile à parcourir tout en permettant de comprendre le "pourquoi" des décisions importantes.
+
+---
+
 ## Évolution
 
 Ce document est évolutif.
 
 Toute nouvelle convention de documentation validée durant le projet doit être ajoutée ici.
+

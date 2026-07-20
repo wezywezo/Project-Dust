@@ -1,54 +1,52 @@
-# Project Dust - Architecture
-
-**Version:** Sprint 00  
-**Status:** Draft  
-**Last Updated:** YYYY-MM-DD
+# Architecture — Project Dust
+ 
+**Status:** Vivant  
 
 ---
 
 # 1. Vision
 
-Project Dust est un moteur de campagne Fallout 2d20 assisté par Intelligence Artificielle.
+L'architecture de Project Dust est conçue pour privilégier la modularité, l'évolutivité et la maintenabilité.
 
-Son objectif est de permettre à un joueur de vivre une campagne solo où l'IA remplit le rôle de Game Master tout en respectant les règles du système Fallout 2d20.
+Project Dust n'est pas pensé comme un jeu codé en dur, mais comme un moteur capable de faire évoluer indépendamment les règles, les campagnes, les interfaces et les services qui le composent.
 
-Project Dust n'est pas conçu comme un jeu codé en dur, mais comme un moteur modulaire capable de faire évoluer les règles, les campagnes et les interfaces sans remettre en cause son architecture.
+Chaque décision d'architecture vise à faciliter l'évolution du projet sans remettre en cause ses fondations.
 
 ---
 
 # 2. Objectifs
 
-Les objectifs principaux du projet sont :
+Les principaux objectifs de l'architecture sont :
 
-- architecture modulaire
-- faible couplage entre les systèmes
-- forte cohésion des modules
-- extensibilité
-- maintenabilité
-- testabilité
+## Qualités de conception
+
+- **Modularité** : chaque système possède une responsabilité claire et peut évoluer indépendamment.
+- **Faible couplage** : limiter les dépendances entre les modules pour faciliter leur évolution.
+- **Forte cohésion** : regrouper dans un même module uniquement les responsabilités liées à son domaine.
+- **Extensibilité** : permettre l'ajout de nouvelles fonctionnalités sans modifier l'existant.
+- **Maintenabilité** : favoriser un code simple à comprendre, corriger et faire évoluer.
+- **Testabilité** : permettre de tester chaque système de manière isolée.
+
+### Indépendance
+
 - indépendance de l'interface utilisateur
 - indépendance du fournisseur d'IA
-- facilité d'ajout de nouvelles fonctionnalités
+
+### Conséquence recherchée
+
+- faciliter l'ajout de nouvelles fonctionnalités sans remettre en cause l'architecture existante
 
 ---
 
 # 3. Principes d'architecture
 
-Le développement repose sur plusieurs principes fondamentaux.
+Les principes suivants guident toutes les décisions d'architecture de Project Dust.
+
+Ils constituent les critères de référence lors de la conception de nouveaux systèmes ou de l'évolution de l'existant.
 
 ## Modularité
 
-Chaque système possède une responsabilité unique.
-
-Exemples :
-
-- Character
-- Combat
-- Inventory
-- Quest
-- Exploration
-- Dialogue
-- Settlement
+Chaque module possède une responsabilité clairement définie et peut évoluer indépendamment des autres, tant que ses interfaces restent respectées.
 
 Chaque module doit pouvoir évoluer indépendamment des autres.
 
@@ -56,7 +54,7 @@ Chaque module doit pouvoir évoluer indépendamment des autres.
 
 ## Séparation des responsabilités
 
-Chaque couche possède un rôle précis.
+CChaque couche possède une responsabilité clairement définie.
 
 Aucune couche ne doit contenir la logique d'une autre.
 
@@ -64,41 +62,40 @@ Aucune couche ne doit contenir la logique d'une autre.
 
 ## Faible couplage
 
-Les modules métier ne communiquent jamais directement entre eux.
-
-Toute communication passe par le moteur principal.
+Les dépendances entre les modules doivent être limitées afin que chacun puisse évoluer avec un impact minimal sur les autres systèmes.
 
 ---
 
 ## Forte cohésion
 
-Chaque module regroupe uniquement les éléments liés à son domaine.
+Chaque module regroupe uniquement les responsabilités liées à son domaine.
 
 ---
 
 ## Testabilité
 
-Chaque système doit pouvoir être testé indépendamment.
+Chaque système doit pouvoir être testé de manière isolée afin de valider son comportement indépendamment des autres modules.
 
 ---
 
 # 4. Architecture générale
 
-Project Dust est organisé en plusieurs couches.
+Project Dust est organisé autour d'un Game Engine qui orchestre plusieurs modules spécialisés.
 
 ```
-UI
-│
-Application
-│
+    UI
+    │
 Game Engine
-│
-Domain
-│
-Infrastructure
+├── Character
+├── Combat
+├── Inventory
+├── Quest
+├── Exploration
+├── Dialogue
+├── Settlement
+├── Save
+└── AI
 ```
-
-Chaque couche ne dépend que de la couche située sous elle.
 
 ---
 
