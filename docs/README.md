@@ -1,10 +1,39 @@
-# Documentation — Project Dust
+# 📚 Documentation — Project Dust
 
-Bienvenue dans la documentation de **Project Dust**.
+Bienvenue dans la documentation officielle de **Project Dust**.
 
-Cette documentation constitue la mémoire durable du projet. Elle décrit non seulement ce qui est développé, mais également les principes, les décisions et les choix de conception qui guident son évolution.
+Cette documentation constitue la mémoire durable du projet. Elle décrit les principes d'architecture, les choix de conception et l'organisation du développement.
 
-Avant de consulter un document particulier, il est recommandé de comprendre l'organisation générale de la documentation.
+Avant de consulter un document particulier, il est recommandé de prendre connaissance de l'organisation générale de cette documentation.
+
+---
+
+> [!TIP]
+> **Nouveau sur Project Dust ?**
+>
+> Nous recommandons de découvrir la documentation dans l'ordre suivant :
+>
+> 1. `00_foundation/00_project_charter.md`
+> 2. `00_foundation/01_architecture.md`
+> 3. `00_foundation/02_development_guidelines.md`
+> 4. `03_roadmap/`
+> 5. `04_sprints/`
+
+---
+
+# Où commencer ?
+
+Selon ce que vous recherchez, voici le point d'entrée recommandé.
+
+| Si vous souhaitez... | Consultez |
+|----------------------|-----------|
+| 🚀 Découvrir le projet | `00_foundation/00_project_charter.md` |
+| 🏛 Comprendre l'architecture générale | `00_foundation/01_architecture.md` |
+| ⚙ Comprendre la conception d'un système | `01_design/` |
+| 📐 Retrouver une décision d'architecture | `02_adr/` |
+| 🗺 Consulter la feuille de route | `03_roadmap/` |
+| 🏃 Suivre le développement actuel | `04_sprints/` |
+| 💡 Explorer des idées ou POC | `05_ideas/` |
 
 ---
 
@@ -42,7 +71,7 @@ Elle regroupe :
 
 - les **Fondations**, qui définissent les principes permanents du projet ;
 - les documents de **Design**, qui décrivent la conception des différentes parties du logiciel ;
-- les **ADR** (*Architecture Decision Records*), qui expliquent les décisions importantes et leur justification.
+- les **Architecture Decision Records (ADR)**, qui documentent les décisions importantes et leur justification.
 
 ## Exécution
 
@@ -92,7 +121,7 @@ Chaque document explique notamment :
 - leurs interactions ;
 - les règles métier.
 
-Ces documents évoluent avec le logiciel.
+Ces documents évoluent avec le logiciel et constituent la référence technique de chaque système.
 
 ---
 
@@ -115,7 +144,7 @@ Les ADR constituent la mémoire des décisions d'architecture du projet.
 
 La Roadmap présente la vision du projet à moyen et long terme.
 
-Elle décrit les différentes phases du projet, leur objectif, leur état d'avancement ainsi que les sprints associés.
+Elle décrit les différentes phases du projet, leurs objectifs, leur état d'avancement ainsi que les sprints associés.
 
 Elle permet de suivre la progression globale du projet sans entrer dans le détail de l'implémentation.
 
@@ -130,7 +159,7 @@ Il constitue la mémoire du sprint et documente notamment :
 - son objectif ;
 - sa portée ;
 - ses livrables ;
-- les critères de fin du sprint ;
+- les critères de validation ;
 - la rétrospective.
 
 Le détail de l'implémentation reste dans le code et les documents de conception lorsque nécessaire.
@@ -143,7 +172,7 @@ Le dossier **Ideas** regroupe les idées, recherches, expérimentations et preuv
 
 Il permet d'explorer de nouvelles pistes avant qu'une décision soit prise.
 
-Une idée validée pourra ensuite être intégrée à la roadmap puis planifiée dans un sprint.
+Une idée validée pourra ensuite être intégrée à la Roadmap puis planifiée dans un sprint.
 
 ---
 
@@ -152,6 +181,8 @@ Une idée validée pourra ensuite être intégrée à la roadmap puis planifiée
 La documentation est rédigée principalement en français.
 
 Le code source, les noms de classes, les méthodes, les variables et les éléments techniques utilisent l'anglais.
+
+Cette séparation permet de conserver une documentation accessible tout en respectant les conventions de développement logiciel.
 
 ---
 
@@ -170,3 +201,7 @@ L'objectif est de permettre à tout développeur de comprendre rapidement :
 Le dépôt Git et la documentation constituent ensemble la mémoire durable de Project Dust.
 
 À tout moment, il doit être possible de reprendre le développement sans dépendre de l'historique d'une conversation particulière.
+
+---
+
+Retour à la page principale du projet : **`../README.md`**
