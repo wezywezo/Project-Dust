@@ -2,7 +2,6 @@
 
 > *« Si tout le reste disparaissait, ce document devrait suffire à reconstruire Project Dust sans perdre sa vision. »*
 
-**Version :** Sprint 00  
 **Statut :** Vivant (évolue avec le projet)
 
 ---
@@ -49,6 +48,7 @@ Nous privilégions toujours :
 - les besoins réels avant les besoins hypothétiques ;
 - la qualité avant la rapidité ;
 - les décisions réfléchies avant les solutions improvisées.
+- une source de vérité unique plutôt que la duplication des informations.
 
 Nous acceptons de réécrire du code.
 
@@ -58,16 +58,7 @@ Nous refusons de perdre le raisonnement qui a conduit à son écriture.
 
 # Notre méthode
 
-Chaque sprint suit le même cycle.
-
-1. Comprendre le problème.
-2. Réfléchir ensemble.
-3. Concevoir une solution.
-4. Implémenter.
-5. Relire.
-6. Apprendre.
-
-Le code n'est qu'une étape de ce processus.
+Notre démarche repose sur la compréhension, la réflexion, la conception, l'implémentation et l'amélioration continue.
 
 ---
 
@@ -125,8 +116,6 @@ Si la réponse est non, alors le document manque probablement d'informations imp
 
 # Les fondations du projet
 
-Les documents de fondation définissent la vision, les principes et la manière de développer Project Dust.
-
 Ils constituent le cadre de référence du projet et doivent rester stables dans le temps.
 
 Une fois le Sprint 00 terminé, ces documents sont considérés comme établis.
@@ -143,6 +132,8 @@ Les documents de fondation ne sont pas réécrits pour améliorer leur formulati
 Ils évoluent uniquement lorsque l'expérience apporte un enseignement suffisamment important pour remettre en question un principe existant.
 
 La stabilité des fondations permet au projet d'évoluer sans avoir à rediscuter continuellement les mêmes décisions.
+
+Les documents de fondation définissent la vision, les principes et la manière de développer Project Dust.
 
 ---
 
@@ -162,27 +153,17 @@ Nous cherchons à devenir meilleurs grâce à lui.
 
 # Nos principes fondateurs
 
-Les connaissances ont plus de valeur que le code.
-
-Documenter le "pourquoi" est souvent plus important que documenter le "comment".
-
-Chaque décision importante doit pouvoir être expliquée.
-
-La simplicité est un choix d'ingénierie.
-
-Une bonne architecture facilite le changement.
-
-Le code est temporaire.
-
-Les bonnes décisions durent.
-
-Nous acceptons de réécrire le code.
-
-Nous refusons de perdre la vision.
-
-Chaque fonctionnalité doit résoudre un problème réel.
-
-Un projet réussi est un projet que l'on peut reprendre des années plus tard sans repartir de zéro.
+- Les connaissances ont plus de valeur que le code.
+- Documenter le "pourquoi" est souvent plus important que documenter le "comment".
+- Chaque décision importante doit pouvoir être expliquée.
+- La simplicité est un choix d'ingénierie.
+- Une bonne architecture facilite le changement.
+- Le code est temporaire.
+- Les bonnes décisions durent.
+- Nous acceptons de réécrire le code.
+- Nous refusons de perdre la vision.
+- Chaque fonctionnalité doit résoudre un problème réel.
+- Un projet réussi est un projet que l'on peut reprendre des années plus tard sans repartir de zéro.
 
 ---
 
