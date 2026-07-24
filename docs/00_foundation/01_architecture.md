@@ -1,6 +1,6 @@
 # Architecture — Project Dust
- 
-**Status:** Vivant  
+
+**Status:** Vivant
 
 ---
 
@@ -27,14 +27,16 @@ Les principaux objectifs de l'architecture sont :
 - **Maintenabilité** : favoriser un code simple à comprendre, corriger et faire évoluer.
 - **Testabilité** : permettre de tester chaque système de manière isolée.
 
-### Indépendance
+## Indépendance
 
-- indépendance de l'interface utilisateur
-- indépendance du fournisseur d'IA
+Le moteur doit rester indépendant :
 
-### Conséquence recherchée
+- de l'interface utilisateur ;
+- du fournisseur d'intelligence artificielle.
 
-- faciliter l'ajout de nouvelles fonctionnalités sans remettre en cause l'architecture existante
+## Conséquence recherchée
+
+Chaque décision d'architecture doit permettre au projet d'évoluer avec un impact minimal sur les systèmes existants.
 
 ---
 
@@ -46,15 +48,13 @@ Ils constituent les critères de référence lors de la conception de nouveaux s
 
 ## Modularité
 
-Chaque module possède une responsabilité clairement définie et peut évoluer indépendamment des autres, tant que ses interfaces restent respectées.
-
-Chaque module doit pouvoir évoluer indépendamment des autres.
+Chaque module possède une responsabilité clairement définie et peut évoluer indépendamment des autres.
 
 ---
 
 ## Séparation des responsabilités
 
-CChaque couche possède une responsabilité clairement définie.
+Chaque couche possède une responsabilité clairement définie.
 
 Aucune couche ne doit contenir la logique d'une autre.
 
@@ -78,133 +78,87 @@ Chaque système doit pouvoir être testé de manière isolée afin de valider so
 
 ---
 
-# 4. Architecture générale
+# 4. Le cœur du moteur
 
-Project Dust est organisé autour d'un Game Engine qui orchestre plusieurs modules spécialisés.
+Le cœur de Project Dust est le **Game Engine**.
 
-```
-    UI
-    │
-Game Engine
-├── Character
-├── Combat
-├── Inventory
-├── Quest
-├── Exploration
-├── Dialogue
-├── Settlement
-├── Save
-└── AI
-```
-
----
-
-# 5. Le cœur du moteur
-
-Le cœur du projet est le Game Engine.
+Il agit comme orchestrateur du système.
 
 Il est responsable de :
 
-- coordonner les systèmes
-- gérer le cycle de jeu
-- transmettre les événements
-- appliquer les règles globales
-- orchestrer les interactions entre les modules
+- coordonner les systèmes ;
+- gérer le cycle de jeu ;
+- acheminer les demandes vers le module approprié ;
+- poursuivre le déroulement de la partie selon les résultats obtenus.
 
-Le Game Engine ne contient pas les règles métier.
-
----
-
-# 6. Modules
-
-Le moteur est composé de plusieurs modules indépendants.
-
-Modules actuellement prévus :
-
-- Core
-- Character
-- Inventory
-- Combat
-- Exploration
-- Dialogue
-- Quest
-- Settlement
-- AI
-- Database
-- Save
-- UI
-
-Cette liste pourra évoluer au cours du projet.
+Le Game Engine ne contient jamais les règles métier.
 
 ---
 
-# 7. Dépendances
+# 5. Répartition des responsabilités
 
-Les modules métier ne doivent jamais dépendre directement les uns des autres.
+Le Game Engine sait **quand** les choses doivent se produire.
 
-Exemple :
+Les modules savent **comment** elles se produisent.
 
-❌ Combat → Inventory
+Le Game Engine exprime les intentions du système.
 
-✔ Combat → Game Engine → Inventory
+Chaque module applique les règles de son propre domaine et retourne le résultat de son traitement.
 
-Le Game Engine agit comme orchestrateur.
-
----
-
-# 8. Intelligence Artificielle
-
-L'IA est considérée comme un service.
-
-Le moteur ne dépend d'aucun fournisseur spécifique.
-
-Il doit être possible de remplacer :
-
-- OpenAI
-- Ollama
-- LM Studio
-- tout autre fournisseur compatible
-
-sans modifier la logique métier.
+Cette séparation constitue l'une des règles fondamentales de l'architecture de Project Dust.
 
 ---
 
-# 9. Interface utilisateur
+# 6. Dépendances
+
+Les modules métier ne communiquent jamais directement entre eux.
+
+Toute interaction entre deux modules transite par le Game Engine, qui agit comme orchestrateur du système.
+
+Cette règle garantit un faible couplage entre les différents domaines métier.
+
+---
+
+# 7. Intelligence Artificielle
+
+L'intelligence artificielle est considérée comme un service externe.
+
+Le moteur ne dépend d'aucun fournisseur particulier.
+
+Il doit être possible de remplacer un fournisseur d'IA sans modifier la logique métier.
+
+---
+
+# 8. Interface utilisateur
 
 L'interface utilisateur est indépendante du moteur.
 
-Le projet doit pouvoir fonctionner avec :
-
-- interface console
-- interface graphique
-- interface Web
-
-sans modifier les systèmes métier.
+Le moteur doit pouvoir fonctionner avec différentes interfaces sans modifier les systèmes métier.
 
 ---
 
-# 10. Évolutivité
+# 9. Évolutivité
 
 L'ajout d'un nouveau système doit avoir un impact minimal sur les systèmes existants.
 
 L'architecture doit favoriser :
 
-- l'ajout de fonctionnalités
-- la maintenance
-- les tests
-- la réutilisation du code
+- l'ajout de fonctionnalités ;
+- la maintenance ;
+- les tests ;
+- la réutilisation du code.
 
 ---
 
-# 11. Structure du dépôt
+# 10. Structure du dépôt
 
-La structure générale du dépôt est décrite dans la documentation du projet.
+La structure du dépôt est documentée séparément.
 
-Elle pourra évoluer tant que les principes d'architecture sont respectés.
+Elle pourra évoluer tant que les principes définis dans ce document sont respectés.
 
 ---
 
-# 12. Conclusion
+# 11. Conclusion
 
 Toutes les décisions prises durant le développement devront respecter les principes définis dans ce document.
 
