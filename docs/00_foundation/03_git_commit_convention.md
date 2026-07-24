@@ -1,4 +1,4 @@
-# Git Commit Conventions
+# Git Commit Convention
 
 **Version:** Sprint 00  
 **Status:** Approved
@@ -15,7 +15,7 @@ Cette convention permet de :
 - faciliter les revues de code ;
 - comprendre rapidement l'évolution du projet ;
 - simplifier la maintenance du dépôt ;
-- préparer une éventuelle génération automatique des changelogs et des versions.
+- faciliter l'exploitation de l'historique Git.
 
 Chaque commit doit représenter **une seule modification logique**.
 
@@ -124,10 +124,10 @@ Maintenance du projet.
 
 Exemples :
 
-- mise à jour des dépendances
-- configuration des outils
-- nettoyage du dépôt
-- scripts de développement
+- mise à jour des dépendances ;
+- configuration des outils ;
+- nettoyage du dépôt ;
+- scripts de développement.
 
 Exemples :
 
@@ -240,6 +240,19 @@ inventory added
 Le titre doit permettre de comprendre immédiatement le contenu du commit.
 
 Éviter les descriptions longues.
+
+---
+
+## Granularité
+
+Un commit doit représenter une évolution cohérente du projet.
+
+Il doit être suffisamment petit pour être compris et relu facilement, tout en représentant une modification logique complète.
+
+Éviter :
+
+- les commits regroupant plusieurs sujets différents ;
+- les commits excessivement petits qui fragmentent inutilement l'historique.
 
 ---
 
