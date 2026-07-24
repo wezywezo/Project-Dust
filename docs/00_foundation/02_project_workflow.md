@@ -1,4 +1,4 @@
-# Project Methodology
+# Project Workflow
 
 **Version:** Sprint 00
 **Status:** Approved
@@ -35,6 +35,8 @@ Chaque sprint suit le même cycle.
 ## 1. Discovery
 
 Comprendre le problème.
+
+Avant de chercher une solution, il est essentiel de définir clairement la question à laquelle cette fonctionnalité ou cette décision doit répondre.
 
 Questions :
 
